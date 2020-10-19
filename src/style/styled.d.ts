@@ -1,7 +1,11 @@
-import "styled-components"
+import 'styled-components'
 
-declare module "styled-components" {
-  export interface DefaultTheme {
-    colors: {}
-  }
+declare module 'styled-components' {
+    export interface DefaultTheme {
+        colors: {
+            seconary: string
+            fontColor: string
+            darkGrey: string
+        }
+    }
 }
