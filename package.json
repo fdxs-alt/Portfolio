@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -14,12 +14,23 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.24.79",
+    "babel-plugin-styled-components": "^1.11.1",
+    "gatsby": "^2.24.80",
+    "gatsby-plugin-sharp": "^2.6.42",
+    "gatsby-plugin-styled-components": "^3.3.14",
+    "gatsby-remark-images": "^3.3.35",
+    "gatsby-remark-relative-images": "^2.0.2",
+    "gatsby-source-filesystem": "^2.3.35",
+    "gatsby-transformer-remark": "^2.8.42",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "@types/styled-components": "^5.1.4",
+    "cross-env": "^7.0.2",
+    "prettier": "2.1.2",
+    "typescript": "^4.0.3"
   },
   "repository": {
     "type": "git",
