@@ -8,6 +8,7 @@ export const MainContent = styled.section`
     justify-content: space-between;
     align-items: center;
     height: 75vh;
+    max-width: 1200px;
 `;
 export const ImageTag = styled.img`
     max-width: 450px;

@@ -1,18 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled from 'styled-components'
+import styled from 'styled-components';
 export const AboutMeSection = styled.section`
     height: 75vh;
+    max-height: 1200px;
     background-color: #56babd;
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+`;
 export const AboutTitle = styled.h1`
     font-size: 2.2rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
     color: white;
-`
+`;
 export const AboutParagraph = styled.p`
     font-size: 1.1rem;
     color: white;
@@ -21,13 +22,14 @@ export const AboutParagraph = styled.p`
     text-align: center;
     font-weight: 500;
     line-height: 1.5;
-`
+`;
 export const SkillsSection = styled.section`
+    padding: 1rem;
     width: 65%;
     margin: 0 auto;
-    margin-top: -25vh;
+    margin-top: -30vh;
     height: 85vh;
-    max-height: 1500px;
+    max-height: 800px;
     border-radius: 1.5rem;
     background-color: white;
     display: flex;
