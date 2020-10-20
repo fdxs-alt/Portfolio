@@ -48,6 +48,7 @@ export const Wrapper = styled.footer`
     padding: 1rem;
     color: ${props => props.theme.colors.seconary};
     border-top: 2px solid ${props => props.theme.colors.fontColor};
+    margin-top: 1rem;
 `
 export const ImageTag = styled.img`
     max-width: 60px;

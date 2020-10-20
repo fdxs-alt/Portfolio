@@ -1,22 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
 import {
     AboutMeSection,
     AboutTitle,
     AboutParagraph,
-} from '../style/AboutMe.styles'
+    Column,
+    ColumTitle,
+    IconWrapper,
+    Skill,
+    SkillList,
+    SkillsSection,
+    StyledIcon,
+} from '../style/AboutMe.styles';
+import { faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 
-const SkillsSection = styled.section`
-    width: 75%;
-    margin: 0 auto;
-    margin-top: -15%;
-    height: 85vh;
-    max-height: 1500px;
-    border-radius: 1.5rem;
-    background-color: white;
-    display: flex;
-    border: 2px solid ${props => props.theme.colors.fontColor};
-`
 const AboutSection = () => {
     return (
         <div>
@@ -32,9 +28,42 @@ const AboutSection = () => {
                     dedicated person.
                 </AboutParagraph>
             </AboutMeSection>
-            <SkillsSection>ojsik</SkillsSection>
+            <SkillsSection>
+                <Column>
+                    <SkillList>
+                        <IconWrapper>
+                            <StyledIcon icon={faReact} />
+                            <ColumTitle>FRONTEND</ColumTitle>
+                        </IconWrapper>
+                        <Skill>Typescript</Skill>
+                        <Skill>React | Hooks | Context API</Skill>
+                        <Skill>CSS | SASS</Skill>
+                        <Skill>Styled components</Skill>
+                        <Skill>Redux | redux-thunk</Skill>
+                        <Skill>MobX</Skill>
+                        <Skill>Apollo Client React</Skill>
+                        <Skill>Gatsby</Skill>
+                    </SkillList>
+                </Column>
+                <Column>
+                    <SkillList>
+                        <IconWrapper>
+                            <StyledIcon icon={faNodeJs} />
+                            <ColumTitle>BACKEND</ColumTitle>
+                        </IconWrapper>
+                        <Skill>Typescript</Skill>
+                        <Skill>Node.js</Skill>
+                        <Skill>Express</Skill>
+                        <Skill>NestJS</Skill>
+                        <Skill>Socket.io</Skill>
+                        <Skill>MongoDB | Mongoose</Skill>
+                        <Skill>TypeORM | PostgreSQL</Skill>
+                        <Skill>Apollo Server | TypeGraphQL</Skill>
+                    </SkillList>
+                </Column>
+            </SkillsSection>
         </div>
-    )
-}
+    );
+};
 
-export default AboutSection
+export default AboutSection;

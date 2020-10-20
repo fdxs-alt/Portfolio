@@ -6,6 +6,7 @@ declare module 'styled-components' {
             seconary: string
             fontColor: string
             darkGrey: string
+            darkFont: string
         }
     }
 }

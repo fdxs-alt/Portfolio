@@ -1,5 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components'
-
 export const AboutMeSection = styled.section`
     height: 75vh;
     background-color: #56babd;
@@ -22,3 +22,51 @@ export const AboutParagraph = styled.p`
     font-weight: 500;
     line-height: 1.5;
 `
+export const SkillsSection = styled.section`
+    width: 65%;
+    margin: 0 auto;
+    margin-top: -25vh;
+    height: 85vh;
+    max-height: 1500px;
+    border-radius: 1.5rem;
+    background-color: white;
+    display: flex;
+    border: 2px solid ${props => props.theme.colors.fontColor};
+
+    span:first-of-type {
+        border-right: 3px solid ${props => props.theme.colors.fontColor};
+    }
+`;
+export const Column = styled.span`
+    width: 50%;
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+export const SkillList = styled.ul`
+    list-style: none;
+`;
+export const Skill = styled.li`
+    padding: 0.8rem;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+`;
+
+export const IconWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+`;
+export const ColumTitle = styled.h1`
+    letter-spacing: 2px;
+    font-size: 2rem;
+    color: ${props => props.theme.colors.darkFont};
+`;
+export const StyledIcon = styled(FontAwesomeIcon)`
+    font-size: 2.5rem;
+    margin-right: 0.9rem;
+    color: ${props => props.theme.colors.darkFont};
+`;
