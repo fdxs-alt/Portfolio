@@ -19,6 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "babel-plugin-styled-components": "^1.11.1",
+    "emailjs-com": "^2.6.3",
     "gatsby": "^2.24.80",
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-styled-components": "^3.3.14",

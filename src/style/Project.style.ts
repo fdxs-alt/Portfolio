@@ -7,7 +7,7 @@ export const ProjectImage = styled.img<TWrapper>`
     max-width: 500px;
     width: 50%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     box-shadow: ${props =>
         props.isEven
             ? '-10px 10px 25px #dbdbdb,10px -10px 25px #ffffff'
@@ -26,7 +26,7 @@ export const PostitonedWrapper = styled.div<TWrapper>`
 export const ContentWrapper = styled.div<TWrapper>`
     width: 50%;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2.5rem;
     box-shadow: ${props =>
         props.isEven
             ? '10px 10px 25px #e6e6e6, -10px -10px 25px #ffffff'

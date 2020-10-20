@@ -20,8 +20,9 @@ export const AboutParagraph = styled.p`
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    letter-spacing: 1px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.8;
 `;
 export const SkillsSection = styled.section`
     padding: 1rem;

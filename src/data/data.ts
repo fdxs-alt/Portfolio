@@ -10,37 +10,29 @@ const data = [
             'Simple app, built with React and Express, with MongoDB, allowing user to shorten their links.',
         link: 'https://github.com/fdxs-alt/url-shortener',
         workInProgress: false,
-        deploy: true,
+        deploy: 'url-shortener-jsss.herokuapp.com/',
     },
     {
         photo: Project2,
         description:
-            'Chat app built with React and Redux on frontend, on backend Node.js with Express framework. It allows user to register, log in, creating/deleting rooms, and sending messages via websockets',
+            'Chat app built with React and Redux on frontend, on backend Node.js with Express framework. It allows user to register, log in, creating/deleting rooms, and sending messages via websockets.',
         link: 'https://github.com/fdxs-alt/Chatty',
         workInProgress: false,
-        deploy: true,
+        deploy: 'https://chatty.herokuapp.com/',
     },
     {
         photo: Project3,
         description:
-            'Clone of popular page nofluffjobs.com created with Apollo GraphQl + Typescript',
+            'Clone of popular page nofluffjobs.com created with Apollo GraphQl + Typescript + TypeGraphQL, allowing users to menage their company, or sending cvs and storing them in database',
         link: 'https://github.com/fdxs-alt/nofluffjobs-clone',
         workInProgress: false,
-        deploy: false,
     },
     {
         photo: Project4,
         description:
-            'Clone of twitter with react, mobX and nestjs (work in progress)',
+            'Clone of twitter with React, MobX and Nestjs with TypeORM+PostgreSQL (work in progress). Most complicated project so far. It is supposed to provide all basic Twitter functionality and also sending messages.',
         link: 'https://github.com/fdxs-alt/twitter-clone',
         workInProgress: true,
-        deploy: false,
-    },
-    {
-        description:
-            'Backend application which allows to book rooms, creating hotels, adding room photos, contacting hotel owner and adding opinions, with usage of Sequlize as ORM, Express, TypeScript',
-        link: 'https://github.com/fdxs-alt/Hotel-App',
-        workInProgress: false,
     },
 ];
 

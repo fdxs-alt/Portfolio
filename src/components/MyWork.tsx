@@ -26,7 +26,7 @@ export interface IData {
     link: string;
     photo?: undefined;
     workInProgress?: boolean;
-    deploy?: boolean;
+    deploy?: string;
 }
 
 const MyWork = () => {
