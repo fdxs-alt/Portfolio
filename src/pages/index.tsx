@@ -11,7 +11,7 @@ import {
 } from '../style/Home.style';
 import MyWork from '../components/MyWork';
 import ContactForm from '../components/ContactForm';
-
+console.log(process.env.NODE_ENV, process.env.TEMPLATE)
 export default function Home() {
     return (
         <Layout>
