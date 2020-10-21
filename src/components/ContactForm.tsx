@@ -26,14 +26,14 @@ const ContactForm = () => {
 
         try {
             await send(
-                process.env.SERVICE_ID as string,
-                process.env.TEMPLATE as string,
+                process.env.GATSBY_SERVICE_ID as string,
+                process.env.GATSBY_TEMPLATE as string,
                 {
                     from_name: name,
                     email,
                     message,
                 },
-                process.env.USER_ID
+                process.env.GATSBY_USER_ID
             );
             setSuccess('SUCCESS');
         } catch (error) {
