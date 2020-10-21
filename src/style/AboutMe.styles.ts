@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 export const AboutMeSection = styled.section`
     height: 75vh;
@@ -25,6 +26,7 @@ export const AboutParagraph = styled.p`
     line-height: 1.8;
 `;
 export const SkillsSection = styled.section`
+    overflow: hidden;
     padding: 1rem;
     width: 65%;
     margin: 0 auto;
@@ -40,7 +42,7 @@ export const SkillsSection = styled.section`
         border-right: 3px solid ${props => props.theme.colors.fontColor};
     }
 `;
-export const Column = styled.span`
+export const Column = styled(motion.span)`
     width: 50%;
     padding: 1rem;
     height: 100%;

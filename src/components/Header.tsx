@@ -9,7 +9,16 @@ import {
 import Image from '../images/f4be07fa-4fac-4d75-8549-9ec29cfa6720_200x200.png';
 const Header = () => {
     return (
-        <Navbar>
+        <Navbar
+            animate={{ y: 0 }}
+            initial={{ y: '-200%' }}
+            transition={{
+                duration: 0.5,
+                delay: 0.2,
+                stiffness: 50,
+                type: 'spring',
+            }}
+        >
             <ImageTag src={Image} alt="my_logo" />
             <NavbarList>
                 <NavLi>

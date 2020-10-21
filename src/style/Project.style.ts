@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 type TWrapper = {
     isEven: boolean;
 };
-export const ProjectImage = styled.img<TWrapper>`
+export const ProjectImage = styled(motion.img)<TWrapper>`
     max-width: 500px;
     width: 50%;
     object-fit: cover;
@@ -23,10 +24,10 @@ export const PostitonedWrapper = styled.div<TWrapper>`
     align-items: center;
 `;
 
-export const ContentWrapper = styled.div<TWrapper>`
+export const ContentWrapper = styled(motion.div)<TWrapper>`
     width: 50%;
     border-radius: 1rem;
-    padding: 2.5rem;
+    padding: 2rem;
     box-shadow: ${props =>
         props.isEven
             ? '10px 10px 25px #e6e6e6, -10px -10px 25px #ffffff'

@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-export const Navbar = styled.nav`
+export const Navbar = styled(motion.nav)`
     display: flex;
     width: 100%;
     justify-content: space-between;

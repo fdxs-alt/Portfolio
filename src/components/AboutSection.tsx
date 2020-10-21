@@ -12,8 +12,13 @@ import {
     StyledIcon,
 } from '../style/AboutMe.styles';
 import { faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
+import { useInView } from 'react-intersection-observer';
 
 const AboutSection = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    });
+
     return (
         <div>
             <AboutMeSection>
@@ -28,8 +33,12 @@ const AboutSection = () => {
                     dedicated person.
                 </AboutParagraph>
             </AboutMeSection>
-            <SkillsSection>
-                <Column>
+            <SkillsSection ref={ref}>
+                <Column
+                    animate={{ x: inView ? 0 : '-50vw' }}
+                    initial={{ x: '-50wv' }}
+                    transition={{ delay: 0.4, type: 'tween' }}
+                >
                     <SkillList>
                         <IconWrapper>
                             <StyledIcon icon={faReact} />
@@ -45,7 +54,11 @@ const AboutSection = () => {
                         <Skill>Gatsby</Skill>
                     </SkillList>
                 </Column>
-                <Column>
+                <Column
+                    animate={{ x: inView ? 0 : '50vw' }}
+                    initial={{ x: '50wv' }}
+                    transition={{ delay: 0.4, type: 'tween' }}
+                >
                     <SkillList>
                         <IconWrapper>
                             <StyledIcon icon={faNodeJs} />
