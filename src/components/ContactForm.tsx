@@ -1,80 +1,58 @@
-import React, { ChangeEvent, useState } from 'react';
-import {} from 'emailjs-com';
-import styled from 'styled-components';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { send } from 'emailjs-com';
+import {
+    Wrapper,
+    ContactFormWrapper,
+    StyledTitle,
+    ContactFormElement,
+    ContactLabel,
+    ContactInput,
+    MessageInput,
+    SubmitButton,
+} from './ContactForm.styles';
 
-const ContactFormWrapper = styled.div`
-    width: 70%;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.4rem;
-`;
-
-const ContactFormElement = styled.form`
-    width: 70%;
-    margin: 1.2rem auto;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-`;
-const ContactLabel = styled.label`
-    font-size: 1rem;
-    color: ${props => props.theme.colors.darkFont};
-    margin: 0.9rem 0;
-`;
-const ContactInput = styled.input`
-    width: 100%;
-    border: 2px solid ${props => props.theme.colors.lightBlue};
-    background-color: white;
-    padding: 1.2rem;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    outline: none;
-`;
-const StyledTitle = styled.h1`
-    padding: 1rem;
-    font-size: 2.3rem;
-    font-weight: 600;
-`;
-const Wrapper = styled.div`
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-`;
-const MessageInput = styled.textarea`
-    resize: vertical;
-    padding: 1.2rem;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    outline: none;
-    width: 100%;
-    border: 2px solid ${props => props.theme.colors.lightBlue};
-`;
-const SubmitButton = styled.button`
-    background-color: white;
-    padding: 0.8rem;
-    border: 3px solid ${props => props.theme.colors.darkGrey};
-    color: ${props => props.theme.colors.darkGrey};
-    border-radius: 2rem;
-    align-self: center;
-    min-width: 150px;
-    width: 25%;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-`;
 const ContactForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [success, setSuccess] = useState<string | null>(null);
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        const data = new FormData();
 
-    const onSumbit = () => {};
+        data.append('from_name', name);
+        data.append('email', email);
+        data.append('message', message);
+
+        try {
+            await send(
+                process.env.SERVICE_ID as string,
+                process.env.TEMPLATE as string,
+                {
+                    from_name: name,
+                    email,
+                    message,
+                },
+                process.env.USER_ID
+            );
+            setSuccess('SUCCESS');
+        } catch (error) {
+            setSuccess('ERROR');
+        }
+
+        setEmail('');
+        setMessage('');
+        setName('');
+
+        setTimeout(() => {
+            setSuccess(null);
+        }, 3000);
+    };
 
     return (
         <ContactFormWrapper>
             <StyledTitle>Are you interested? Contact me!</StyledTitle>
-            <ContactFormElement>
+            <ContactFormElement onSubmit={(e: FormEvent) => handleSubmit(e)}>
                 <div
                     style={{ display: 'flex', justifyContent: 'space-between' }}
                 >
@@ -85,7 +63,9 @@ const ContactForm = () => {
                             value={name}
                             type="text"
                             required
-                            onChange={e => setName(e.target.value)}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                                setName(e.target.value)
+                            }
                         />
                     </Wrapper>
                     <Wrapper>
@@ -94,7 +74,9 @@ const ContactForm = () => {
                             name="email"
                             value={email}
                             type="email"
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                                setEmail(e.target.value)
+                            }
                             required
                         />
                     </Wrapper>
@@ -103,12 +85,20 @@ const ContactForm = () => {
                 <MessageInput
                     name="message"
                     value={message}
-                    onChange={e => setMessage(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                        setMessage(e.target.value)
+                    }
                     required
                     cols={4}
                     rows={8}
                 />
-                <SubmitButton type="button">Submit</SubmitButton>
+                <SubmitButton type="submit">
+                    {success
+                        ? success === 'SUCCESS'
+                            ? 'Email sent'
+                            : 'Error'
+                        : 'Submit'}
+                </SubmitButton>
             </ContactFormElement>
         </ContactFormWrapper>
     );

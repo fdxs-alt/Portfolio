@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
     plugins: [
         `gatsby-plugin-styled-components`,
@@ -25,4 +27,4 @@ module.exports = {
             },
         },
     ],
-}
+};
