@@ -1,22 +1,25 @@
-const path = require('path')
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
+const path = require('path');
 module.exports.onCreateNode = ({ node, actions }) => {
-    const { createNodeField } = actions
+    const { createNodeField } = actions;
 
     if (node.internal.type === 'MarkdownRemark') {
-        const slug = path.basename(node.fileAbsolutePath, '.md')
+        const slug = path.basename(node.fileAbsolutePath, '.md');
 
         createNodeField({
             node,
             name: 'slug',
             value: slug,
-        })
+        });
     }
-}
+};
 
 module.exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage } = actions;
 
-    const BlogTemplate = path.resolve('./src/templates/BlogPost.tsx')
+    const BlogTemplate = path.resolve('./src/templates/BlogPost.tsx');
 
     const response = await graphql(`
         query {
@@ -30,7 +33,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
                 }
             }
         }
-    `)
+    `);
 
     response.data.allMarkdownRemark.edges.forEach(edge => {
         createPage({
@@ -39,6 +42,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
             context: {
                 slug: edge.node.fields.slug,
             },
-        })
-    })
-}
+        });
+    });
+};
