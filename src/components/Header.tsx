@@ -13,7 +13,7 @@ const Header = () => {
             animate={{ y: 0 }}
             initial={{ y: '-200%' }}
             transition={{
-                duration: 0.5,
+                duration: 0.3,
                 delay: 0.2,
                 stiffness: 50,
                 type: 'spring',

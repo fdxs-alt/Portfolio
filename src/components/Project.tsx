@@ -1,43 +1,21 @@
 import React from 'react';
 import { IData } from './MyWork';
-import styled from 'styled-components';
 import {
     PostitonedWrapper,
     ProjectImage,
     ContentWrapper,
+    Description,
+    GithubLink,
+    StyledIcon,
+    WorkInProgressTitle,
 } from '../style/Project.style';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faTools } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useInView } from 'react-intersection-observer';
 
 interface IProject extends IData {
     order: number;
 }
-
-const Description = styled.p`
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-`;
-const GithubLink = styled.a`
-    margin-right: 0.5rem;
-    color: ${props => props.theme.colors.darkFont};
-    &:hover {
-        color: ${props => props.theme.colors.darkGrey};
-    }
-`;
-type TIcon = {
-    sm?: boolean;
-};
-export const StyledIcon = styled(FontAwesomeIcon)<TIcon>`
-    font-size: ${props => (props.sm ? '1.1rem' : '2.5rem')};
-    color: ${props => (props.sm ? props.theme.colors.darkFont : 'inherit')};
-    margin-right: 0.5rem;
-`;
-export const WorkInProgressTitle = styled.p`
-    font-size: 1.1rem;
-`;
 
 const Project: React.FC<IProject> = ({
     description,
@@ -57,7 +35,7 @@ const Project: React.FC<IProject> = ({
                 isEven={isEven}
                 initial={{ x: isEven ? '100vw' : '-100vw' }}
                 animate={{ x: inView ? 0 : '' }}
-                transition={{ delay: 0.2, type: 'tween' }}
+                transition={{ delay: 0., type: 'tween', duration: 1 }}
             />
             <ContentWrapper
                 isEven={isEven}

@@ -75,3 +75,22 @@ export const StyledIcon = styled(FontAwesomeIcon)`
     margin-right: 0.9rem;
     color: ${props => props.theme.colors.darkFont};
 `;
+export const WorkWrapper = styled.div`
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid ${props => props.theme.colors.lightBlue};
+`;
+
+export const ProjectsTitle = styled.h1`
+    padding: 1rem;
+    font-size: 2.3rem;
+`;
+export const ProjectTitleSmall = styled.p`
+    color: ${props => props.theme.colors.darkGrey};
+    padding: 1.4rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+`;

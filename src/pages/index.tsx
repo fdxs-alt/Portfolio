@@ -10,6 +10,7 @@ import {
     Wrapper,
 } from '../style/Home.style';
 import MyWork from '../components/MyWork';
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
     return (
@@ -24,6 +25,7 @@ export default function Home() {
             </MainContent>
             <AboutSection />
             <MyWork />
+            <ContactForm />
         </Layout>
     );
 }

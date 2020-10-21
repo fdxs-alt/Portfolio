@@ -37,7 +37,7 @@ const AboutSection = () => {
                 <Column
                     animate={{ x: inView ? 0 : '-50vw' }}
                     initial={{ x: '-50wv' }}
-                    transition={{ delay: 0.4, type: 'tween' }}
+                    transition={{ delay: 0.2, type: 'tween' }}
                 >
                     <SkillList>
                         <IconWrapper>
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 <Column
                     animate={{ x: inView ? 0 : '50vw' }}
                     initial={{ x: '50wv' }}
-                    transition={{ delay: 0.4, type: 'tween' }}
+                    transition={{ delay: 0.2, type: 'tween' }}
                 >
                     <SkillList>
                         <IconWrapper>

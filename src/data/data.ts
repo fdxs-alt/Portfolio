@@ -10,7 +10,7 @@ const data = [
             'Simple app, built with React and Express, with MongoDB, allowing user to shorten their links.',
         link: 'https://github.com/fdxs-alt/url-shortener',
         workInProgress: false,
-        deploy: 'url-shortener-jsss.herokuapp.com/',
+        deploy: 'https://url-shortener-jsss.herokuapp.com/',
     },
     {
         photo: Project2,

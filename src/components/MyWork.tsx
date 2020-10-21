@@ -1,26 +1,14 @@
 import React from 'react';
 import data from '../data/data';
 import Project from './Project';
-import styled from 'styled-components';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { GithubLink, StyledIcon } from '../style/Project.style';
+import {
+    WorkWrapper,
+    ProjectsTitle,
+    ProjectTitleSmall,
+} from '../style/AboutMe.styles';
 
-const WorkWrapper = styled.div`
-    width: 80%;
-    margin: 3rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
-const ProjectsTitle = styled.h1`
-    padding: 1rem;
-    font-size: 2.3rem;
-`;
-const ProjectTitleSmall = styled.p`
-    color: ${props => props.theme.colors.darkGrey};
-    padding: 1rem;
-    font-size: 1.1rem;
-    margin-bottom: 0.6rem;
-`;
 export interface IData {
     description: string;
     link: string;
@@ -48,6 +36,15 @@ const MyWork = () => {
                     order={i + 1}
                 />
             ))}
+            <ProjectTitleSmall>
+                <GithubLink href="https://github.com/fdxs-alt" target="blank">
+                    Find out more about my projects on
+                    <StyledIcon
+                        icon={faGithubSquare}
+                        style={{ marginLeft: '0.5rem' }}
+                    />
+                </GithubLink>
+            </ProjectTitleSmall>
         </WorkWrapper>
     );
 };
