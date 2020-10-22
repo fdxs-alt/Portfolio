@@ -26,7 +26,7 @@ const AboutSection = () => {
                 <AboutParagraph>
                     I am 20 years old student of Politechnika Krakowska.
                     Programming became my passion about 1,5 years ago. I mostly
-                    focus on web development, but I also interested in other
+                    focus on web development, but I'm also interested in other
                     technologies like C++. I’m planning on developing my web
                     skills by learning microservices and also expanding my
                     knowledge in Telco industry. I found myself hardworking and

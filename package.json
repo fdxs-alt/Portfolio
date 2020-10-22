@@ -23,6 +23,7 @@
     "emailjs-com": "^2.6.3",
     "framer-motion": "^2.9.3",
     "gatsby": "^2.24.80",
+    "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-remark-images": "^3.3.35",
@@ -31,11 +32,13 @@
     "gatsby-transformer-remark": "^2.8.42",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.29.1",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
+    "@types/react-helmet": "^6.1.0",
     "@types/styled-components": "^5.1.4",
     "prettier": "2.1.2",
     "typescript": "^4.0.3"
