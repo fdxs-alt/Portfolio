@@ -9,7 +9,8 @@ import {
     ContactInput,
     MessageInput,
     SubmitButton,
-} from './ContactForm.styles';
+} from '../style/ContactForm.styles';
+import { useInView } from 'react-intersection-observer';
 
 const ContactForm = () => {
     const [name, setName] = useState('');
@@ -49,10 +50,19 @@ const ContactForm = () => {
         }, 3000);
     };
 
+    const { inView, ref } = useInView({
+        triggerOnce: true,
+    });
+
     return (
         <ContactFormWrapper>
-            <StyledTitle>Are you interested? Contact me!</StyledTitle>
-            <ContactFormElement onSubmit={(e: FormEvent) => handleSubmit(e)}>
+            <StyledTitle ref={ref}>Lets stay in touch 🙌</StyledTitle>
+            <ContactFormElement
+                onSubmit={(e: FormEvent) => handleSubmit(e)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: inView ? 1 : 0 }}
+                transition={{ delay: 0.5 }}
+            >
                 <div
                     style={{ display: 'flex', justifyContent: 'space-between' }}
                 >

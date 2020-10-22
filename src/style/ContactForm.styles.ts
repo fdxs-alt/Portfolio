@@ -1,3 +1,5 @@
+import { size } from './../data/RWD';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const ContactFormWrapper = styled.div`
@@ -8,14 +10,22 @@ export const ContactFormWrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0.4rem;
+
+    @media (max-width: 1024px) {
+        width: 90%;
+    }
 `;
 
-export const ContactFormElement = styled.form`
+export const ContactFormElement = styled(motion.form)`
     width: 70%;
     margin: 1.2rem auto;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: ${size.tablet}) {
+        width: 100%;
+    }
 `;
 export const ContactLabel = styled.label`
     font-size: 1rem;
@@ -35,6 +45,7 @@ export const StyledTitle = styled.h1`
     padding: 1rem;
     font-size: 2.3rem;
     font-weight: 600;
+    text-align: center;
 `;
 export const Wrapper = styled.div`
     width: 45%;

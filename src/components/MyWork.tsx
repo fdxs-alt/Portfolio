@@ -36,15 +36,6 @@ const MyWork = () => {
                     order={i + 1}
                 />
             ))}
-            <ProjectTitleSmall>
-                <GithubLink href="https://github.com/fdxs-alt" target="blank">
-                    Find out more about my projects on
-                    <StyledIcon
-                        icon={faGithubSquare}
-                        style={{ marginLeft: '0.5rem' }}
-                    />
-                </GithubLink>
-            </ProjectTitleSmall>
         </WorkWrapper>
     );
 };

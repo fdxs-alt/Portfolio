@@ -11,14 +11,13 @@ import {
 } from '../style/Home.style';
 import MyWork from '../components/MyWork';
 import ContactForm from '../components/ContactForm';
-console.log(process.env.NODE_ENV, process.env.TEMPLATE)
 export default function Home() {
     return (
         <Layout>
             <MainContent>
                 <ImageTag src={Image} alt="code_thinking" />
                 <Wrapper>
-                    <p style={{ fontSize: '1.8rem' }}>Hello 👋, my name is</p>
+                    <About>Hello 👋, my name is</About>
                     <AboutMe>Jakub Sukiennik</AboutMe>
                     <About>Passionate fullstack developer from Poland</About>
                 </Wrapper>

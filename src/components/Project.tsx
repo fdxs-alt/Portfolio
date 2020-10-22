@@ -8,6 +8,7 @@ import {
     GithubLink,
     StyledIcon,
     WorkInProgressTitle,
+    IconWrapper,
 } from '../style/Project.style';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faTools } from '@fortawesome/free-solid-svg-icons';
@@ -35,7 +36,7 @@ const Project: React.FC<IProject> = ({
                 isEven={isEven}
                 initial={{ x: isEven ? '100vw' : '-100vw' }}
                 animate={{ x: inView ? 0 : '' }}
-                transition={{ delay: 0., type: 'tween', duration: 1 }}
+                transition={{ delay: 0, type: 'tween', duration: 1 }}
             />
             <ContentWrapper
                 isEven={isEven}
@@ -45,13 +46,7 @@ const Project: React.FC<IProject> = ({
                 transition={{ delay: 0.2, type: 'tween' }}
             >
                 <Description>{description}</Description>
-                <div
-                    style={{
-                        marginTop: '1rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                    }}
-                >
+                <IconWrapper>
                     <GithubLink href={`${link}`} target="blank">
                         <StyledIcon icon={faGithub} />
                     </GithubLink>
@@ -71,7 +66,7 @@ const Project: React.FC<IProject> = ({
                             To deploy
                         </WorkInProgressTitle>
                     )}
-                </div>
+                </IconWrapper>
             </ContentWrapper>
         </PostitonedWrapper>
     );
