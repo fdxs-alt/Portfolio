@@ -1,6 +1,7 @@
 ---
-date: '19-10-2020'
+date: '22 October, 2020'
 title: 'What does double exclamation mark do in JS?'
+description: 'Have you ever seen double exclamation mark in JavaScript code? If so do you understand? Anyway let me explain'
 ---
 
 #### True versus Truthy
@@ -31,11 +32,11 @@ Falseys value means - when converted to boolean, they are false.
 Basically it allows you to cast your values to boolean
 
 ```javascript
-const s = 'JavaScript syntax highlighting'
+const s = 'JavaScript syntax highlighting';
 
-alert(typeof s)
+alert(typeof s);
 
-const booleanValue = !!s
+const booleanValue = !!s;
 
-alert(typeof booleanValue)
+alert(typeof booleanValue);
 ```
