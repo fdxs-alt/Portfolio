@@ -6,7 +6,8 @@ import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
 import { Helmet } from 'react-helmet';
-
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
 const Wrapper = styled.div`
     width: 100%;
 `;
@@ -16,7 +17,10 @@ const Layout: React.FC = ({ children }) => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Jakub Sukiennik</title>
-                <link rel="canonical" href="https://jakubsukiennik.netlify.app/" />
+                <link
+                    rel="canonical"
+                    href="https://jakubsukiennik.netlify.app/"
+                />
             </Helmet>
             <GlobalStyle />
             <Wrapper>

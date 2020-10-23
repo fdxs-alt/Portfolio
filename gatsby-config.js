@@ -23,6 +23,7 @@ module.exports = {
                             maxWidth: 750,
                             linkImagesToOrginal: false,
                         },
+                        resolve: `gatsby-remark-highlight-code`,
                     },
                 ],
             },

@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^2.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -27,10 +28,11 @@
     "gatsby-plugin-sharp": "^2.6.42",
     "gatsby-plugin-styled-components": "^3.3.14",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-highlight-code": "^2.1.0",
     "gatsby-remark-images": "^3.3.35",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^2.3.35",
-    "gatsby-transformer-remark": "^2.8.42",
+    "gatsby-transformer-remark": "^2.8.46",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",

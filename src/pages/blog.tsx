@@ -1,8 +1,7 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { BlogPostWrapper, PostWrapper, Title, Data, Description } from '../style/Blog.styles';
 interface IData {
     node: {
         frontmatter: {
@@ -15,36 +14,7 @@ interface IData {
         };
     };
 }
-const BlogPostWrapper = styled.div`
-    width: 60%;
-    margin: auto;
-    min-height: 90vh;
-`;
-const Title = styled(Link)`
-    color: ${props => props.theme.colors.darkFont};
-    width: 100%;
-    padding: 1rem;
-    font-size: 2.2rem;
-    text-decoration: none;
-    font-weight: 800;
 
-    &:hover {
-        color: ${props => props.theme.colors.darkGrey};
-    }
-`;
-const Data = styled.div`
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-`;
-const Description = styled.p`
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    text-align: justify;
-`;
-const PostWrapper = styled(motion.div)`
-    padding: 1rem;
-`;
 const blog = () => {
     const data = useStaticQuery(query);
 

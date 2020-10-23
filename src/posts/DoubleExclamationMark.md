@@ -4,11 +4,11 @@ title: 'What does double exclamation mark do in JS?'
 description: 'Have you ever seen double exclamation mark in JavaScript code? If so do you understand? Anyway let me explain'
 ---
 
-#### True versus Truthy
+### True versus Truthy
 
 To understand this topic you need first of all to know the difference between falseys and truthys values.
 
-The following values are considered by JavaScript to be falseys:
+### The following values are considered by JavaScript to be falseys:
 
 1. Empty string: ""
 2. 0
@@ -16,10 +16,10 @@ The following values are considered by JavaScript to be falseys:
 4. undefined
 5. NaN
 
-The following values are considered by JavaScript to be truthys:
+### The following values are considered by JavaScript to be truthys:
 
-1. Object: {}
-2. Array: []
+1. Object: { }
+2. Array: [ ]
 3. Not empty string: "anything"
 4. Number other than zero: 3.14
 5. Date: new Date();
@@ -27,7 +27,7 @@ The following values are considered by JavaScript to be truthys:
 Thruthy value means - when converted to boolean, they are true.
 Falseys value means - when converted to boolean, they are false.
 
-#### Double exclamation marks?
+### Double exclamation marks?
 
 Basically it allows you to cast your values to boolean
 
