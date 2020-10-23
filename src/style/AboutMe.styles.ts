@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 export const AboutMeSection = styled.section`
-    height: 65vh;
+    height: 80vh;
     background-color: #56babd;
     display: flex;
     flex-direction: column;
