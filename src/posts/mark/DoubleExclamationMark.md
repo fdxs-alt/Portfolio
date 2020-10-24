@@ -4,6 +4,8 @@ title: 'What does double exclamation mark do in JS?'
 description: 'Have you ever seen double exclamation mark in JavaScript code? If so do you understand? Anyway let me explain'
 ---
 
+![Code](code.png)
+
 ### True versus Truthy
 
 To understand this topic you need first of all to know the difference between falseys and truthys values.
