@@ -26,12 +26,14 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `GatsbyJS`,
-                short_name: `GatsbyJS`,
+                name: `Jakub Sukiennik`,
+                short_name: `JS`,
                 start_url: `/`,
+                description: `My portfolio`,
                 background_color: `#f7f0eb`,
                 theme_color: `#a2466c`,
                 display: `standalone`,
+                icon: `src/images/gatsby-icon.png`,
             },
         },
         {
