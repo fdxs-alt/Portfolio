@@ -1,8 +1,6 @@
 import React from 'react';
 import data from '../data/data';
 import Project from './Project';
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { GithubLink, StyledIcon } from '../style/Project.style';
 import {
     WorkWrapper,
     ProjectsTitle,

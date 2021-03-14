@@ -81,3 +81,17 @@ export const SubmitButton = styled.button`
         color: ${props => props.theme.colors.darkFont};
     }
 `;
+
+export const Success = styled.p`
+    color: green;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+`;
+
+export const ErrorMess = styled.p`
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+`;

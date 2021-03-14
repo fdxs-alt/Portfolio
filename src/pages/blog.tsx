@@ -1,7 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
-import { BlogPostWrapper, PostWrapper, Title, Data, Description } from '../style/Blog.styles';
+import {
+    BlogPostWrapper,
+    PostWrapper,
+    Title,
+    Data,
+    Description,
+} from '../style/Blog.styles';
 interface IData {
     node: {
         frontmatter: {

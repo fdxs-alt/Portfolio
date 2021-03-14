@@ -9,6 +9,8 @@ import {
     ContactInput,
     MessageInput,
     SubmitButton,
+    Success,
+    ErrorMess,
 } from '../style/ContactForm.styles';
 import { useInView } from 'react-intersection-observer';
 
@@ -17,6 +19,7 @@ const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [success, setSuccess] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         const data = new FormData();
@@ -24,7 +27,7 @@ const ContactForm = () => {
         data.append('from_name', name);
         data.append('email', email);
         data.append('message', message);
-
+        setLoading(true);
         try {
             await send(
                 process.env.GATSBY_SERVICE_ID as string,
@@ -39,6 +42,8 @@ const ContactForm = () => {
             setSuccess('SUCCESS');
         } catch (error) {
             setSuccess('ERROR');
+        } finally {
+            setLoading(false);
         }
 
         setEmail('');
@@ -103,12 +108,14 @@ const ContactForm = () => {
                     rows={8}
                 />
                 <SubmitButton type="submit">
-                    {success
-                        ? success === 'SUCCESS'
-                            ? 'Email sent'
-                            : 'Error'
-                        : 'Submit'}
+                    {loading ? 'Sending...' : 'Send email'}
                 </SubmitButton>
+                {success === 'SUCCESS' && (
+                    <Success>Email sent successfully</Success>
+                )}
+                {success === 'ERROR' && (
+                    <ErrorMess>Cannot send an email</ErrorMess>
+                )}
             </ContactFormElement>
         </ContactFormWrapper>
     );
