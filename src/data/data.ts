@@ -64,7 +64,7 @@ const data = [
   {
     photo: Project8,
     description:
-      'Nextjs app allowing user to create custom forms like those at Google Forms. Using MongoDB as DB and mongoose as ORM. Types of input: email, date, checkbox, radio, text, textarea and number. Form provider can access the result. Authentication provided by Auth0',
+      'Nextjs app allowing user to create custom forms like those at Google Forms. Using MongoDB as DB and mongoose as ORM. Types of input: email, date, checkbox, radio, text, textarea and number. Form provider can access the result. Authentication provided by Auth0.',
     deploy: 'https://form-creator.vercel.app/',
     link: 'https://github.com/fdxs-alt/form-creator',
     workInProgress: false,
