@@ -5,6 +5,7 @@ import Project4 from '../images/scrnli_10_20_2020_9-48-51 AM.png';
 import Project5 from '../images/Screenshot.png';
 import Project6 from '../images/Screenshot2.png';
 import Project7 from '../images/project7.png';
+import Project8 from '../images/form-creator.png';
 
 const data = [
   {
@@ -58,6 +59,14 @@ const data = [
       'Nextjs app allowing admin to sell games. Using DatoCMS as headless CMS. Paymenets provided by stripe. Full cart functionality. Data about orders stored in MongoDB.',
     deploy: 'https://next-shop-stripe.vercel.app/',
     link: 'https://github.com/fdxs-alt/nextjs-shop',
+    workInProgress: false,
+  },
+  {
+    photo: Project8,
+    description:
+      'Nextjs app allowing user to create custom forms like those at Google Forms. Using MongoDB as DB and mongoose as ORM. Types of input: email, date, checkbox, radio, text, textarea and number. Form provider can access the result. Authentication provided by Auth0',
+    deploy: 'https://form-creator.vercel.app/',
+    link: 'https://github.com/fdxs-alt/form-creator',
     workInProgress: false,
   },
 ];
